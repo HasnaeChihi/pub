@@ -39,7 +39,7 @@ class HomeController extends Controller
         ]); //i will leave a link to the validation documentation
  
         $user = auth()->user(); // return the authenticated user in the session
-        $user->publications->create($data); // creates a post for this user with the data 
+        $user->publications()->create($data); // creates a post for this user with the data 
  
         $request->session()->flash('success', 'Publication created successfully'); // creates a flash message  
                                                                           // to inform the user that the post has been created
